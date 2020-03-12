@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                Background-image:url("https://cdn2us.denofgeek.com/sites/denofgeekus/files/2017/12/it.jpg");
+                background-size: cover;
+            }
+            #valid {
+                position:absolute;
+                top:10%;
+                right:15%;
+                opacity: 30%;
+                padding:20px;
+                color:white;
+                border-radius: 7px;
+                border-color:aliceblue;
+                font-size: 20px;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            .sign:hover {
+                padding: 10px 10px;
+                border-radius: 15px;
+                background-color: black;
+                color:aliceblue
+            }
+            .sign{
+                padding:10px 10px;
+                border-radius: 15px;
+                width: 100px;               
+            }
+            
+            .bor{
+                border-radius: 5px;
+            }
+            .ballon{
+                position: absolute;
+                bottom:0%;left:10%;
+                animation-name:balloon;
+                animation-duration: 30s;
+                animation-iteration-count:infinite}
+            @keyframes balloon
+            {
+                0% {bottom:-10%;left:10%}
+                50% {bottom:50%;left:10%}
+                100% {bottom: 80;left:10%;transform: scale(1.5,1.5);}
+            }
+            .button{
+		display:inline-block;
+		position: absolute;
+		bottom:7%;
+		right:85%;
+		transition:0.3 ease;
+		}
+.button a{
+		color:white;
+		padding:15px 20px;
+		text-decoration: none;
+		float:left;
+		
+		}
+.button a:hover{
+		background:white;
+		color:black;
+        border-radius: 15px;;
+		}
+.create
+{
+    animation-name:create;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    position: relative;
+    top:0%;
+    left:40%;
+}
+@keyframes create
+{
+    0% {top:0%;left:10%}
+    50% {top:0%;left:25%}
+    75% {top:0%;left:50%}
+    100% {top:0%;left: 25%;}
+}
+        </style>
+    </head>
+    <body>
+        <div id="logo">
+            <img src="logo.png" width="150px">
+        </div>
+        <br>
+        <div>
+            <form name="form" method="post" onsubmit="validation()" id="valid">
+                <h3 style="color:white;font-family:AKbalthom KhmerGothic;" class="create"><b>Create a Register account</b></h3>
+        User Name:<br><input name="username" type="text" size="50" placeholder="User Name" class="bor"><br><br>
+        Password:<br><input name="password" type="password" size="50" placeholder="Password" class="bor"><br><br>
+        Confirm Password:<br><input name="repassword" type="password" size="50" placeholder="Confirm Password" class="bor"><br><br>
+        Sex: <input type="radio" name="sex">Male <input type="radio" name="sex">Female <input type="radio" name="sex">Other<br><br>
+        Date of Birth:<br><input name="dob" type="date" size="50" class="bor"><br><br>
+        Phone Number:<br><input name="phonenumber" type="text" size="50" placeholder="Phone Numebr" class="bor"><br><br>
+        Religion:<br>
+            <input type="radio" name="region">Christian
+            <input type="radio" name="region">Buddishm
+            <input type="radio" name="region">Muslim
+            <input type="radio" name="region">Other<br><br> 
+            <div>
+                <button type="submit" value="Register" class="sign">Register</button>
+            </div>
+        </div>
+        </form>
+        <div class="ballon"><img src="ballon.png" width="200px"></div>
+        <div class="button">
+            <a href="web page.html">GO BACK HOMEPAGE</a>
+    </div>
+        <script>
+            function validation(){
+                var username=document.form.username.value;
+                var password=document.form.password.value;
+                var repassword=document.form.repassword.value;
+                var phonenumber=document.form.phonenumber.value;
+                if (username.length<3){
+                    alert("User Name must be more than 3 character");
+                    return false;
+                }
+                else if (password.length<3){
+                    alert("password must be more than 3 character");
+                    return false;
+                }
+                else if(password!=repassword){
+                    alert("The password doesn't match");
+                    return false;
+                } 
+                else if(phonenumber.length<7){
+                    alert("Your Phone Number Look like wrong!!!");
+                    return false;
+                }  
+            }
+        </script>
+    </body>
+</html>

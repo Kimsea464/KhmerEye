@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                Background-image:url("https://cdn2us.denofgeek.com/sites/denofgeekus/files/2017/12/it.jpg");
+                background-size: cover;   
+            }
+            x;
+            }
+            .ballon{
+                position: absolute;
+                bottom:0%;left:10%;
+                animation-name:balloon;
+                animation-duration: 30s;
+                animation-iteration-count:infinite}
+            @keyframes balloon
+            {
+                0% {bottom:-10%;left:10%}
+                50% {bottom:50%;left:10%}
+                100% {bottom: 80;left:10%;transform: scale(1.5,1.5);}
+            }
+            .button{
+		display:inline-block;
+		position: absolute;
+		bottom:7%;
+		right:85%;
+		transition:0.3 ease;
+		}
+.button a{
+		color:white;
+		padding:15px 20px;
+		text-decoration: none;
+		float:left;
+		
+		}
+.button a:hover{
+		background:lightseagreen;
+		color:black;
+        border-radius: 15px;;
+		}
+.create
+{
+    animation-name:create;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    position: relative;
+    top:0%;
+    left:40%;
+}
+@keyframes create
+{
+    0% {top:0%;left:10%}
+    50% {top:0%;left:25%}
+    75% {top:0%;left:50%}
+    100% {top:0%;left: 25%;}
+}
+.descript{
+    position:absolute;
+    top:10%;
+    left:60%;
+    color:white;
+}
+.name {
+    background-color:orange;
+    opacity: 1;
+    margin:20px;
+    padding:20px;
+    border-radius: 4%;
+    color:black;
+    animation-name: author;
+    animation-duration: 3s;
+}
+@keyframes author{
+    from{
+        width:0;
+        height: 0;
+    }
+    tp{
+        width:500px;
+        height: 300px;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div id="logo">
+            <img src="logo.png" width="150px">
+        </div>
+        <div class="ballon"><img src="ballon.png" width="200px"></div>
+        <div class="button">
+            <a href="web page.html">GO BACK HOMEPAGE</a>
+    </div>
+    <div class="descript">
+        <h1>Coming Soon...</h1>
+        <h3>We will explore something new To provide users have new experience !!! </h3>
+        <h3>Thank for support us</h3>
+    </div>
+    </div>
+    </body>
+</html>
